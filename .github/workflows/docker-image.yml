@@ -24,7 +24,7 @@ jobs:
         if: github.event_name == 'push'
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          username: docker login -u winterjoe 
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: build and push docker image
